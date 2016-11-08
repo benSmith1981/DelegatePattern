@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DelegatePattern/GoingOut.swift"
-            timestampString = "500306373.85426"
+            timestampString = "500312146.597418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
             landmarkName = "GoingOut"
             landmarkType = "3">
          </BreakpointContent>
@@ -42,59 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DelegatePattern/GoingOut.swift"
-            timestampString = "500306662.157925"
+            timestampString = "500312146.597418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "GoingOut"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DelegatePattern.GoingOut.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;DelegatePattern.GoingOut&gt;"
-                  moduleName = "DelegatePattern"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bensmith/Documents/DelegatePattern/DelegatePattern/GoingOut.swift"
-                  timestampString = "500311247.634713"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DelegatePattern.GoingOut.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;DelegatePattern.GoingOut&gt;"
-                  moduleName = "DelegatePattern"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bensmith/Documents/DelegatePattern/DelegatePattern/GoingOut.swift"
-                  timestampString = "500311247.635872"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DelegatePattern/GoingOut.swift"
-            timestampString = "500306875.623221"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "init(coder:)"
             landmarkType = "7">
          </BreakpointContent>

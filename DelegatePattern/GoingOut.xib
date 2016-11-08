@@ -1,40 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoingOut" customModule="DelegatePattern" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="367" height="190"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pl-Qf-hhd">
-                    <rect key="frame" x="47" y="49" width="83" height="30"/>
-                    <state key="normal" title="Call wife"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pl-Qf-hhd">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="CwY-Sf-hk8"/>
+                        <constraint firstAttribute="width" constant="85" id="nuz-PN-6O4"/>
+                    </constraints>
+                    <state key="normal" title="Arrive at bar"/>
                     <connections>
-                        <action selector="CallWife:" destination="-1" eventType="touchUpInside" id="X0c-DY-zUJ"/>
+                        <action selector="callWife:" destination="-1" eventType="touchUpInside" id="pP0-s7-TzC"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-Io-mDJ">
-                    <rect key="frame" x="60" y="87" width="57" height="30"/>
-                    <state key="normal" title="Call Taxi"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-Io-mDJ">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Dgx-im-YjK"/>
+                        <constraint firstAttribute="width" constant="75" id="vSd-fz-CDv"/>
+                    </constraints>
+                    <state key="normal" title="Called Taxi"/>
                     <connections>
-                        <action selector="callTaxi:" destination="-1" eventType="touchUpInside" id="yCa-Ya-FpM"/>
+                        <action selector="callTaxi:" destination="-1" eventType="touchUpInside" id="SJr-oJ-DZ9"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jml-bF-dQQ">
-                    <rect key="frame" x="60" y="130" width="57" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEF-As-wOW">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="aPB-IC-R0p"/>
+                        <constraint firstAttribute="width" constant="57" id="sMQ-wU-XSO"/>
+                    </constraints>
                     <state key="normal" title="Exit Taxi"/>
                     <connections>
-                        <action selector="exitTaxi:" destination="-1" eventType="touchUpInside" id="6Li-YV-eaw"/>
+                        <action selector="exitTaxi:" destination="-1" eventType="touchUpInside" id="3L1-dl-VS3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEf-2M-4Hn">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="111" id="DKK-an-xhN"/>
+                        <constraint firstAttribute="height" constant="30" id="g75-AJ-eYe"/>
+                    </constraints>
+                    <state key="normal" title="Drink more beer"/>
+                    <connections>
+                        <action selector="didDrinkMoreBeer:" destination="-1" eventType="touchUpInside" id="4Nn-1F-YIy"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.58431375029999999" green="0.75686275960000005" blue="0.1215686277" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <constraints>
+                <constraint firstItem="vEf-2M-4Hn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="49" id="FOh-Go-sbs"/>
+                <constraint firstItem="4pl-Qf-hhd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="46" id="K0d-ef-3fP"/>
+                <constraint firstItem="8Ww-Io-mDJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="51" id="NH0-QT-tKI"/>
+                <constraint firstItem="EEF-As-wOW" firstAttribute="leading" secondItem="8Ww-Io-mDJ" secondAttribute="trailing" constant="100" id="O89-nq-W7v"/>
+                <constraint firstItem="8Ww-Io-mDJ" firstAttribute="top" secondItem="4pl-Qf-hhd" secondAttribute="bottom" constant="51" id="oFz-9E-t9f"/>
+                <constraint firstItem="vEf-2M-4Hn" firstAttribute="leading" secondItem="4pl-Qf-hhd" secondAttribute="trailing" constant="68" id="qBb-yx-HeU"/>
+                <constraint firstItem="4pl-Qf-hhd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="49" id="svN-lx-WbT"/>
+                <constraint firstItem="EEF-As-wOW" firstAttribute="top" secondItem="vEf-2M-4Hn" secondAttribute="bottom" constant="51" id="yNR-1N-haD"/>
+            </constraints>
             <point key="canvasLocation" x="360.5" y="116"/>
         </view>
     </objects>

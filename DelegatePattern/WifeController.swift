@@ -10,8 +10,8 @@ import UIKit
 
 protocol CallWifeDelegate: class {
     func didArriveAtBar(_ message: String)
-    func didUpdateAlcoholLevel(_ message: String)
-    func didDrinkBeerNumber(_ message: String)
+    func didExitCab(_ message: String)
+    func didDrinkMoreBeer(_ message: String)
     func didCallCab(_ message: String)
 
 }
@@ -37,14 +37,14 @@ class WifeController: UIViewController, CallWifeDelegate {
         WifeAction.text = message
     }
     
-    func didUpdateAlcoholLevel(_ message: String){
+    func didDrinkMoreBeer(_ message: String){
         WifeAction.text = message
 
     }
     
-    func didDrinkBeerNumber(_ message: String){
+    func didExitCab(_ message: String){
         WifeAction.text = message
-
+        
     }
     
     func didCallCab(_ message: String){

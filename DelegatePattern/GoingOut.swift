@@ -13,15 +13,11 @@ import UIKit
     var delegate: CallWifeDelegate?
     var view: UIView!
 
-    
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-//    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
     }
+    
     func xibSetup() {
         view = loadViewFromNib()
         
@@ -30,6 +26,7 @@ import UIKit
         
         // Make the view stretch with containing view
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(view)
     }
@@ -47,18 +44,23 @@ import UIKit
         super.init(frame: frame)
     }
     
-    @IBAction func CallWife(_ sender: AnyObject) {
-        delegate?.didArriveAtBar("arrived at bar")
+    @IBAction func callWife(_ sender: AnyObject) {
+        delegate?.didArriveAtBar("I am cooking dinner come home soon")
     }
 
     @IBAction func callTaxi(_ sender: AnyObject) {
-        delegate?.didArriveAtBar("Called Taxi")
+        delegate?.didArriveAtBar("Great hurry up")
+    }
+    
+    @IBAction func didDrinkMoreBeer(_ sender: AnyObject) {
+        delegate?.didArriveAtBar("Stop drinking and come home")
+
     }
     
     @IBAction func exitTaxi(_ sender: AnyObject) {
-        delegate?.didArriveAtBar("Exit Taxi")
-
+        delegate?.didArriveAtBar("Your dinner's cold")
     }
+    
     /*
     // MARK: - Navigation
 
