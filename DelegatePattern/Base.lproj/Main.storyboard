@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,13 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9GL-Vp-RmB" customClass="GoingOut" customModule="DelegatePattern" customModuleProvider="target">
-                                <rect key="frame" x="145" y="55" width="311" height="255"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="311" id="ieB-rF-xx2"/>
-                                    <constraint firstAttribute="height" constant="255" id="k28-zD-SlJ"/>
-                                </constraints>
-                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bjb-6H-AEQ">
                                 <rect key="frame" x="163" y="357" width="275" height="30"/>
                                 <constraints>
@@ -34,18 +27,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-f7-6Q3" customClass="GoingOut" customModule="DelegatePattern" customModuleProvider="target">
+                                <rect key="frame" x="163" y="139" width="275" height="166"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="ANa-n7-HmD"/>
+                                    <constraint firstAttribute="height" constant="166" id="NUZ-J2-yTu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bjb-6H-AEQ" firstAttribute="top" secondItem="9GL-Vp-RmB" secondAttribute="bottom" constant="47" id="1Hp-Xc-ojq"/>
                             <constraint firstItem="Bjb-6H-AEQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="143" id="NmG-Ee-6me"/>
-                            <constraint firstItem="9GL-Vp-RmB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="125" id="d3R-Gz-jYy"/>
-                            <constraint firstItem="9GL-Vp-RmB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="voM-eq-GdV"/>
+                            <constraint firstItem="hPd-f7-6Q3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="aoa-gv-ZD4"/>
+                            <constraint firstItem="hPd-f7-6Q3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="143" id="ciN-5y-SSc"/>
+                            <constraint firstItem="Bjb-6H-AEQ" firstAttribute="top" secondItem="hPd-f7-6Q3" secondAttribute="bottom" constant="52" id="tag-hk-I7e"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="WifeAction" destination="Bjb-6H-AEQ" id="Rzd-Md-zP3"/>
-                        <outlet property="goingOutView" destination="9GL-Vp-RmB" id="cNi-m9-AYt"/>
+                        <outlet property="goingOutView" destination="hPd-f7-6Q3" id="Aug-q6-jyF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

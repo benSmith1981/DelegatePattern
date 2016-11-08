@@ -8,24 +8,43 @@
 
 import UIKit
 
-class GoingOut: UIView {
+@IBDesignable class GoingOut: UIView {
 
     var delegate: CallWifeDelegate?
+    var view: UIView!
+
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//    }
+//    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        xibSetup()
+    }
+    func xibSetup() {
+        view = loadViewFromNib()
+        
+        // use bounds not frame or it'll be offset
+        view.frame = bounds
+        
+        // Make the view stretch with containing view
+        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+        // Adding custom subview on top of our view (over any custom drawing > see note below)
+        addSubview(view)
     }
     
+    func loadViewFromNib() -> UIView {
+        
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let nib = UINib(nibName: "GoingOut", bundle: bundle)
+        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        
+        return view
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
-    }
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+   }
     
     @IBAction func CallWife(sender: AnyObject) {
         delegate?.didArriveAtBar("arrived at bar")

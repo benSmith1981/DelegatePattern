@@ -24,6 +24,7 @@ class WifeController: UIViewController, CallWifeDelegate {
         super.viewDidLoad()
         goingOutView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+        //goingOutView.backgroundColor = UIColor.redColor()
     }
 
     override func didReceiveMemoryWarning() {
