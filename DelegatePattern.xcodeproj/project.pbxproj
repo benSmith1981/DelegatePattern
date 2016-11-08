@@ -152,9 +152,11 @@
 				TargetAttributes = {
 					90D1CAE11DD0B80A0098DE98 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 					};
 					90D1CAF51DD0B80A0098DE98 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = 90D1CAE11DD0B80A0098DE98;
 					};
 				};
@@ -341,6 +343,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bensmithinc.DelegatePattern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -352,6 +355,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bensmithinc.DelegatePattern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -363,6 +367,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bensmithinc.DelegatePatternTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DelegatePattern.app/DelegatePattern";
 			};
 			name = Debug;
@@ -375,6 +380,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bensmithinc.DelegatePatternTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DelegatePattern.app/DelegatePattern";
 			};
 			name = Release;
@@ -398,6 +404,7 @@
 				90D1CB011DD0B80A0098DE98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90D1CB021DD0B80A0098DE98 /* Build configuration list for PBXNativeTarget "DelegatePatternTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +413,7 @@
 				90D1CB041DD0B80A0098DE98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

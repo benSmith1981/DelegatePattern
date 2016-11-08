@@ -9,10 +9,10 @@
 import UIKit
 
 protocol CallWifeDelegate: class {
-    func didArriveAtBar(message: String)
-    func didUpdateAlcoholLevel(message: String)
-    func didDrinkBeerNumber(message: String)
-    func didCallCab(message: String)
+    func didArriveAtBar(_ message: String)
+    func didUpdateAlcoholLevel(_ message: String)
+    func didDrinkBeerNumber(_ message: String)
+    func didCallCab(_ message: String)
 
 }
 
@@ -33,21 +33,21 @@ class WifeController: UIViewController, CallWifeDelegate {
     }
 
 
-    func didArriveAtBar(message: String){
+    func didArriveAtBar(_ message: String){
         WifeAction.text = message
     }
     
-    func didUpdateAlcoholLevel(message: String){
-        WifeAction.text = message
-
-    }
-    
-    func didDrinkBeerNumber(message: String){
+    func didUpdateAlcoholLevel(_ message: String){
         WifeAction.text = message
 
     }
     
-    func didCallCab(message: String){
+    func didDrinkBeerNumber(_ message: String){
+        WifeAction.text = message
+
+    }
+    
+    func didCallCab(_ message: String){
         WifeAction.text = message
 
     }
