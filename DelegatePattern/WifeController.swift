@@ -19,10 +19,10 @@ protocol CallWifeDelegate: class {
 class WifeController: UIViewController, CallWifeDelegate {
 
     @IBOutlet weak var WifeAction: UITextField!
-    @IBOutlet weak var GoingOutView: GoingOut!
+    @IBOutlet weak var goingOutView: GoingOut!
     override func viewDidLoad() {
         super.viewDidLoad()
-        GoingOutView.delegate = self
+        goingOutView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 

@@ -16,6 +16,17 @@ class GoingOut: UIView {
         super.awakeFromNib()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
     @IBAction func CallWife(sender: AnyObject) {
         delegate?.didArriveAtBar("arrived at bar")
     }
