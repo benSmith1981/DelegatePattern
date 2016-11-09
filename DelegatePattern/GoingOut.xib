@@ -63,7 +63,7 @@
                 <constraint firstItem="4pl-Qf-hhd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="49" id="svN-lx-WbT"/>
                 <constraint firstItem="EEF-As-wOW" firstAttribute="top" secondItem="vEf-2M-4Hn" secondAttribute="bottom" constant="51" id="yNR-1N-haD"/>
             </constraints>
-            <point key="canvasLocation" x="360.5" y="116"/>
+            <point key="canvasLocation" x="360.5" y="115.5"/>
         </view>
     </objects>
 </document>

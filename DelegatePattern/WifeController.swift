@@ -9,19 +9,26 @@
 import UIKit
 
 protocol CallWifeDelegate: class {
-    func didArriveAtBar(_ message: String)
-    func didExitCab(_ message: String)
-    func didDrinkMoreBeer(_ message: String)
-    func didCallCab(_ message: String)
+    func didArriveAtBar()
+    func didExitCab()
+    func didDrinkMoreBeer()
+    func didCallCab()
 
 }
 
 class WifeController: UIViewController, CallWifeDelegate {
-
+    @IBOutlet weak var goingOutImage: UIImageView!
     @IBOutlet weak var WifeAction: UITextField!
     @IBOutlet weak var goingOutView: GoingOut!
+    
+    var arriveAtBarMessage: Messages!
+    var drinkMoreBeerMessage: Messages!
+    var exitCabMessage: Messages!
+    var callCabMessage: Messages!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadMessages()
         goingOutView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
         //goingOutView.backgroundColor = UIColor.redColor()
@@ -33,22 +40,33 @@ class WifeController: UIViewController, CallWifeDelegate {
     }
 
 
-    func didArriveAtBar(_ message: String){
-        WifeAction.text = message
+    func didArriveAtBar(){
+        WifeAction.text = arriveAtBarMessage.message
+        goingOutImage.image = arriveAtBarMessage.image
     }
     
-    func didDrinkMoreBeer(_ message: String){
-        WifeAction.text = message
+    func didDrinkMoreBeer(){
+        WifeAction.text = drinkMoreBeerMessage.message
+        goingOutImage.image = drinkMoreBeerMessage.image
 
     }
     
-    func didExitCab(_ message: String){
-        WifeAction.text = message
-        
+    func didExitCab(){
+        WifeAction.text = exitCabMessage.message
+        goingOutImage.image = exitCabMessage.image
     }
     
-    func didCallCab(_ message: String){
-        WifeAction.text = message
+    func didCallCab(){
+        WifeAction.text = callCabMessage.message
+        goingOutImage.image = callCabMessage.image
+    }
+    
+    
+    func loadMessages() {
+        arriveAtBarMessage = Messages.init(message: "I am cooking dinner come home soon", image: #imageLiteral(resourceName: "dinner"))
+        drinkMoreBeerMessage = Messages.init(message: "Stop drinking!", image: #imageLiteral(resourceName: "beer"))
+        exitCabMessage = Messages.init(message: "Dinner is cold", image: #imageLiteral(resourceName: "exitCab"))
+        callCabMessage = Messages.init(message: "Hurry dinner is ready", image: #imageLiteral(resourceName: "callCab"))
 
     }
 }

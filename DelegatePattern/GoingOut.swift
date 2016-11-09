@@ -45,20 +45,20 @@ import UIKit
     }
     
     @IBAction func callWife(_ sender: AnyObject) {
-        delegate?.didArriveAtBar("I am cooking dinner come home soon")
+        delegate?.didArriveAtBar()
     }
 
     @IBAction func callTaxi(_ sender: AnyObject) {
-        delegate?.didArriveAtBar("Great hurry up")
+        delegate?.didArriveAtBar()
     }
     
     @IBAction func didDrinkMoreBeer(_ sender: AnyObject) {
-        delegate?.didArriveAtBar("Stop drinking and come home")
+        delegate?.didArriveAtBar()
 
     }
     
     @IBAction func exitTaxi(_ sender: AnyObject) {
-        delegate?.didArriveAtBar("Your dinner's cold")
+        delegate?.didArriveAtBar()
     }
     
     /*

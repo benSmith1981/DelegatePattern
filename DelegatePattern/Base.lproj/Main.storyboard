@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-f7-6Q3" customClass="GoingOut" customModule="DelegatePattern" customModuleProvider="target">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="ANa-n7-HmD"/>
-                                    <constraint firstAttribute="height" constant="166" id="NUZ-J2-yTu"/>
-                                </constraints>
-                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bjb-6H-AEQ">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="PEL-Z2-ooN"/>
@@ -34,17 +28,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-f7-6Q3" customClass="GoingOut" customModule="DelegatePattern" customModuleProvider="target">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="ANa-n7-HmD"/>
+                                    <constraint firstAttribute="height" constant="166" id="NUZ-J2-yTu"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GW1-SE-aVZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GW1-SE-aVZ" secondAttribute="height" multiplier="120:119" id="64V-Q5-gyv"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GW1-SE-aVZ" firstAttribute="top" secondItem="hPd-f7-6Q3" secondAttribute="bottom" constant="44" id="377-NK-xPV"/>
+                            <constraint firstItem="GW1-SE-aVZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="8n0-8M-JtY"/>
                             <constraint firstItem="Bjb-6H-AEQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="NmG-Ee-6me"/>
+                            <constraint firstItem="Bjb-6H-AEQ" firstAttribute="top" secondItem="GW1-SE-aVZ" secondAttribute="bottom" constant="29" id="SaH-dt-Z43"/>
                             <constraint firstItem="hPd-f7-6Q3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="aoa-gv-ZD4"/>
                             <constraint firstItem="hPd-f7-6Q3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="ciN-5y-SSc"/>
-                            <constraint firstItem="Bjb-6H-AEQ" firstAttribute="top" secondItem="hPd-f7-6Q3" secondAttribute="bottom" constant="96" id="tag-hk-I7e"/>
+                            <constraint firstItem="Bjb-6H-AEQ" firstAttribute="top" secondItem="hPd-f7-6Q3" secondAttribute="bottom" constant="311" id="tag-hk-I7e"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="WifeAction" destination="Bjb-6H-AEQ" id="Rzd-Md-zP3"/>
+                        <outlet property="goingOutImage" destination="GW1-SE-aVZ" id="cyS-jV-LDa"/>
                         <outlet property="goingOutView" destination="hPd-f7-6Q3" id="Aug-q6-jyF"/>
                     </connections>
                 </viewController>
