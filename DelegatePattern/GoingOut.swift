@@ -49,16 +49,16 @@ import UIKit
     }
 
     @IBAction func callTaxi(_ sender: AnyObject) {
-        delegate?.didArriveAtBar()
+        delegate?.didCallCab()
     }
     
     @IBAction func didDrinkMoreBeer(_ sender: AnyObject) {
-        delegate?.didArriveAtBar()
+        delegate?.didDrinkMoreBeer()
 
     }
     
     @IBAction func exitTaxi(_ sender: AnyObject) {
-        delegate?.didArriveAtBar()
+        delegate?.didExitCab()
     }
     
     /*

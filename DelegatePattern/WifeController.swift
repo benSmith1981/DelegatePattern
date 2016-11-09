@@ -20,15 +20,10 @@ class WifeController: UIViewController, CallWifeDelegate {
     @IBOutlet weak var goingOutImage: UIImageView!
     @IBOutlet weak var WifeAction: UITextField!
     @IBOutlet weak var goingOutView: GoingOut!
-    
-    var arriveAtBarMessage: Messages!
-    var drinkMoreBeerMessage: Messages!
-    var exitCabMessage: Messages!
-    var callCabMessage: Messages!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadMessages()
+        DataLoader.sharedInstance.loadMessages()
         goingOutView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
         //goingOutView.backgroundColor = UIColor.redColor()
@@ -41,33 +36,32 @@ class WifeController: UIViewController, CallWifeDelegate {
 
 
     func didArriveAtBar(){
-        WifeAction.text = arriveAtBarMessage.message
-        goingOutImage.image = arriveAtBarMessage.image
+        if let arriveAtBarMessage = DataLoader.sharedInstance.arriveAtBarMessage {
+            WifeAction.text = arriveAtBarMessage.message
+            goingOutImage.image = arriveAtBarMessage.image
+        }
     }
     
     func didDrinkMoreBeer(){
-        WifeAction.text = drinkMoreBeerMessage.message
-        goingOutImage.image = drinkMoreBeerMessage.image
-
+        if let drinkMoreBeerMessage = DataLoader.sharedInstance.drinkMoreBeerMessage {
+            WifeAction.text = drinkMoreBeerMessage.message
+            goingOutImage.image = drinkMoreBeerMessage.image
+        }
     }
     
     func didExitCab(){
-        WifeAction.text = exitCabMessage.message
-        goingOutImage.image = exitCabMessage.image
+        if let exitCabMessage = DataLoader.sharedInstance.exitCabMessage {
+            WifeAction.text = exitCabMessage.message
+            goingOutImage.image = exitCabMessage.image
+        }
     }
     
     func didCallCab(){
-        WifeAction.text = callCabMessage.message
-        goingOutImage.image = callCabMessage.image
+        if let callCabMessage = DataLoader.sharedInstance.callCabMessage {
+            WifeAction.text = callCabMessage.message
+            goingOutImage.image = callCabMessage.image
+        }
     }
     
-    
-    func loadMessages() {
-        arriveAtBarMessage = Messages.init(message: "I am cooking dinner come home soon", image: #imageLiteral(resourceName: "dinner"))
-        drinkMoreBeerMessage = Messages.init(message: "Stop drinking!", image: #imageLiteral(resourceName: "beer"))
-        exitCabMessage = Messages.init(message: "Dinner is cold", image: #imageLiteral(resourceName: "exitCab"))
-        callCabMessage = Messages.init(message: "Hurry dinner is ready", image: #imageLiteral(resourceName: "callCab"))
-
-    }
 }
 
