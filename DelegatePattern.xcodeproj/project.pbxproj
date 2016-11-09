@@ -17,6 +17,7 @@
 		90D1CB0B1DD0BF150098DE98 /* GoingOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1CB091DD0BF150098DE98 /* GoingOut.swift */; };
 		90D1CB0C1DD0BF150098DE98 /* GoingOut.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1CB0A1DD0BF150098DE98 /* GoingOut.xib */; };
 		90D716581DD3514A00FB2191 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D716571DD3514A00FB2191 /* DataLoader.swift */; };
+		90D7165A1DD3637000FB2191 /* ObserverKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D716591DD3637000FB2191 /* ObserverKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		90D1CB091DD0BF150098DE98 /* GoingOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoingOut.swift; sourceTree = "<group>"; };
 		90D1CB0A1DD0BF150098DE98 /* GoingOut.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoingOut.xib; sourceTree = "<group>"; };
 		90D716571DD3514A00FB2191 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		90D716591DD3637000FB2191 /* ObserverKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		90D1CAE41DD0B80A0098DE98 /* DelegatePattern */ = {
 			isa = PBXGroup;
 			children = (
+				90D716591DD3637000FB2191 /* ObserverKeys.swift */,
 				90B8DCC51DD348C70097C1AA /* Controller */,
 				90B8DCC41DD348BB0097C1AA /* View */,
 				90B8DCC31DD348A80097C1AA /* Model */,
@@ -241,6 +244,7 @@
 				90D1CB0B1DD0BF150098DE98 /* GoingOut.swift in Sources */,
 				90B8DCBF1DD29B960097C1AA /* Messages.swift in Sources */,
 				90D1CAE61DD0B80A0098DE98 /* AppDelegate.swift in Sources */,
+				90D7165A1DD3637000FB2191 /* ObserverKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

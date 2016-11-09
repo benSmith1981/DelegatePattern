@@ -13,10 +13,10 @@
             timestampString = "500312146.597418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "GoingOut"
-            landmarkType = "3">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init(coder:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DelegatePattern/GoingOut.swift"
-            timestampString = "500312146.597418"
+            filePath = "DelegatePattern/WifeController.swift"
+            timestampString = "500397116.178804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "init(coder:)"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "notifyObservers()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
