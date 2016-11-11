@@ -21,24 +21,21 @@ class WifeController: UIViewController, CallWifeDelegate {
     @IBOutlet weak var WifeAction: UITextField!
     @IBOutlet weak var goingOutView: GoingOut!
     
-    var arriveAtBarMessage: Messages!
-    var drinkMoreBeerMessage: Messages!
-    var exitCabMessage: Messages!
-    var callCabMessage: Messages!
+    var arriveAtBarMessage: Messages?
+    var drinkMoreBeerMessage: Messages?
+    var exitCabMessage: Messages?
+    var callCabMessage: Messages?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Define identifier
-        let notificationName = Notification.Name("NotificationIdentifier")
         // Register to receive notification data
-        NotificationCenter.default.addObserver(self, selector: #selector(WifeController.notifyObservers), name:  NSNotification.Name(rawValue: "arriveBar"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(WifeController.notifyObservers), name:  NSNotification.Name(rawValue: "messagesLoaded"), object: nil)
 
         //call model to load data
         DataLoader.sharedInstance.loadMessages()
         goingOutView.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
-        //goingOutView.backgroundColor = UIColor.redColor()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,57 +45,53 @@ class WifeController: UIViewController, CallWifeDelegate {
 
 
     func didArriveAtBar(){
-        if let arriveAtBarMessage = DataLoader.sharedInstance.arriveAtBarMessage {
+        if let arriveAtBarMessage = arriveAtBarMessage {
             WifeAction.text = arriveAtBarMessage.message
             goingOutImage.image = arriveAtBarMessage.image
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "arriveBar"), object: self)
+            
         }
     }
     
     func didDrinkMoreBeer(){
-        if let drinkMoreBeerMessage = DataLoader.sharedInstance.drinkMoreBeerMessage {
+        if let drinkMoreBeerMessage = drinkMoreBeerMessage {
             WifeAction.text = drinkMoreBeerMessage.message
             goingOutImage.image = drinkMoreBeerMessage.image
         }
     }
     
     func didExitCab(){
-        if let exitCabMessage = DataLoader.sharedInstance.exitCabMessage {
+        if let exitCabMessage = exitCabMessage {
             WifeAction.text = exitCabMessage.message
             goingOutImage.image = exitCabMessage.image
         }
     }
     
     func didCallCab(){
-        if let callCabMessage = DataLoader.sharedInstance.callCabMessage {
+        if let callCabMessage = callCabMessage {
             WifeAction.text = callCabMessage.message
             goingOutImage.image = callCabMessage.image
             
         }
     }
     
-    func notifyObservers() {
-        print(Notification.Name.self)
-//        switch keyPath {
-//        case .didArriveAtBar:
-//            break
-//        case .didDrinkMoreBeer:
-//            break
-//        case .didExitCab:
-//            break
-//        case .didCallCab:
-//            break
-//        }
-//        if (keyPath == .didArriveAtBar) {
-//            // TODO
-//        } else if (keyPath == "didDrinkMoreBeer") {
-//            // TODO
-//        } else if (keyPath == "didExitCab") {
-//            // TODO
-//        } else if (keyPath == "didCallCab") {
-//            // TODO
-//        }
-//        
+    func notifyObservers(notification : NSNotification) {
+        let userInfo = notification.userInfo as! Dictionary<String,Messages?>
+        if let messageArrive = userInfo[ObserverKeys.didArriveAtBar.rawValue]! as Messages? {
+            arriveAtBarMessage = messageArrive
+        }
+        
+        if let drinkMore = userInfo[ObserverKeys.didDrinkMoreBeer.rawValue]! as Messages? {
+            drinkMoreBeerMessage = drinkMore
+        }
+        
+        if let exitCab = userInfo[ObserverKeys.didExitCab.rawValue]! as Messages? {
+            exitCabMessage = exitCab
+        }
+
+        if let callCab = userInfo[ObserverKeys.didCallCab.rawValue]! as Messages? {
+            callCabMessage = callCab
+        }
+
     }
 }
 

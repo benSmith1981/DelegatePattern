@@ -12,6 +12,7 @@ class DataLoader: NSObject {
     var drinkMoreBeerMessage: Messages!
     var exitCabMessage: Messages!
     var callCabMessage: Messages!
+    
     //Singleton
     static let sharedInstance = DataLoader()
     private override init() {}
@@ -22,6 +23,11 @@ class DataLoader: NSObject {
         exitCabMessage = Messages.init(message: "Dinner is cold", image: #imageLiteral(resourceName: "exitCab"))
         callCabMessage = Messages.init(message: "Hurry dinner is ready", image: #imageLiteral(resourceName: "callCab"))
         
+        let userinfo = [ObserverKeys.didArriveAtBar.rawValue :arriveAtBarMessage,
+                        ObserverKeys.didDrinkMoreBeer.rawValue :drinkMoreBeerMessage,
+                        ObserverKeys.didExitCab.rawValue :exitCabMessage,
+                        ObserverKeys.didCallCab.rawValue :callCabMessage]
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "messagesLoaded"), object: self, userInfo: userinfo)
     }
     
 }

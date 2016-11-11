@@ -8,10 +8,10 @@
 
 import Foundation
 
-enum ObserverKeys {
-    case didArriveAtBar
-    case didDrinkMoreBeer
-    case didExitCab
-    case didCallCab
+enum ObserverKeys: String {
+    case didArriveAtBar = "arriveBar"
+    case didDrinkMoreBeer = "drinkMore"
+    case didExitCab = "exitCab"
+    case didCallCab = "callCab"
 
 }
