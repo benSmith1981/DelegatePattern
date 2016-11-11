@@ -13,5 +13,6 @@ enum ObserverKeys: String {
     case didDrinkMoreBeer = "drinkMore"
     case didExitCab = "exitCab"
     case didCallCab = "callCab"
+    case kDataModelListenerKey = "messagesLoaded"
 
 }

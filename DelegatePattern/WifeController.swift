@@ -30,7 +30,7 @@ class WifeController: UIViewController, CallWifeDelegate {
         super.viewDidLoad()
         
         // Register to receive notification data
-        NotificationCenter.default.addObserver(self, selector: #selector(WifeController.notifyObservers), name:  NSNotification.Name(rawValue: "messagesLoaded"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(WifeController.notifyObservers), name:  NSNotification.Name(rawValue: ObserverKeys.kDataModelListenerKey.rawValue), object: nil)
 
         //call model to load data
         DataLoader.sharedInstance.loadMessages()
@@ -38,12 +38,9 @@ class WifeController: UIViewController, CallWifeDelegate {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
-
+    // MARK: Our CallWifeDelegate methods
+    
     func didArriveAtBar(){
         if let arriveAtBarMessage = arriveAtBarMessage {
             WifeAction.text = arriveAtBarMessage.message
@@ -74,6 +71,10 @@ class WifeController: UIViewController, CallWifeDelegate {
         }
     }
     
+    /** This listens out for the data model to send data
+     
+     - parameter notification : NSNotification The data passed as key value dictionary to our listener method
+     */
     func notifyObservers(notification : NSNotification) {
         let userInfo = notification.userInfo as! Dictionary<String,Messages?>
         if let messageArrive = userInfo[ObserverKeys.didArriveAtBar.rawValue]! as Messages? {
